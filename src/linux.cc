@@ -1086,7 +1086,7 @@ int update_running_processes(void) {
 }
 
 int update_cpu_usage(void) {
-  struct timespec tc = {0L, 100L * 1000000L};
+  struct timespec tc = {0L, 1000000L};
   update_stat();
   if (-1 == (nanosleep(&tc, NULL))) {
     NORM_ERR("update_cpu_usage(): nanosleep() failed");
